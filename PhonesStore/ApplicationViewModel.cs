@@ -104,11 +104,11 @@ namespace SQLiteApp
         public ApplicationViewModel()
         {
             db = new ApplicationContext();
-            
+
             db.Phones.Load();
             db.Phones.Local.ToBindingList();
             Phones = db.Phones.Local;
-            
+
             db.Users.Load();
             db.Users.Local.ToBindingList();
             Users = db.Users.Local;
@@ -161,9 +161,9 @@ namespace SQLiteApp
                     close = true;
                 }
                 else
-                {
-                    db.Users.Local.Add(registrationWindow.regUser);
+                {    
                     ConnectUser = registrationWindow.regUser;
+                    db.Users.Add(registrationWindow.regUser);
                     db.SaveChanges();
                 }
             }
