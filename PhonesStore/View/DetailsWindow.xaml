@@ -1,0 +1,227 @@
+﻿<Window x:Class="SQLiteApp.DetailsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:SQLiteApp"
+        mc:Ignorable="d"
+        Title="DetailsWindow" Height="450" Width="850">
+
+    <Grid Background="CornflowerBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0.4*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid Grid.Column="0" Background="AliceBlue">
+            <Image Source="{Binding SelectedPhone.Image}"/>
+        </Grid>
+
+        <StackPanel Grid.Column="1" >
+            <StackPanel Margin="10" Grid.Row="0">
+                <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                    <TextBlock Text="Модель: "
+                                Style="{StaticResource TextBlockBase}"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{Binding SelectedPhone.Model}"
+                                Style="{StaticResource TextBlockBase}"/>
+                </Grid>
+                    
+                <Grid>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                    <TextBlock Text="Виробник: "
+                                Style="{StaticResource TextBlockBase}"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{Binding SelectedPhone.Company}"
+                                Style="{StaticResource TextBlockBase}"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Ціна: "
+                                Style="{StaticResource TextBlockBase}"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{Binding SelectedPhone.Price}"
+                                Style="{StaticResource TextBlockBase}"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Діагональ екрана: "
+                                Style="{StaticResource TextBlockBase}"/>
+                    <TextBlock Grid.Column="1" 
+                               Text="{Binding SelectedPhone.Screen}"
+                                Style="{StaticResource TextBlockBase}"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Ємність акумулятора: "
+                                Style="{StaticResource TextBlockBase}"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{Binding SelectedPhone.Battery}"
+                                Style="{StaticResource TextBlockBase}"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Оперативная память: "
+                                Style="{StaticResource TextBlockBase}"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{Binding SelectedPhone.OperativeMemory}"
+                                Style="{StaticResource TextBlockBase}"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Вбудована пам'ять: "
+                                Style="{StaticResource TextBlockBase}"/>
+                    <TextBlock Grid.Column="1"
+                                Text="{Binding SelectedPhone.BuiltInMemory}"
+                                Style="{StaticResource TextBlockBase}"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Основна камера: "
+                                Style="{StaticResource TextBlockBase}"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{Binding SelectedPhone.MainCamera}"
+                                Style="{StaticResource TextBlockBase}"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Фронтальна камера: "
+                                Style="{StaticResource TextBlockBase}"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{Binding SelectedPhone.FrontCamera}"
+                                Style="{StaticResource TextBlockBase}"/>
+                </Grid>
+
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <TextBlock Text="Опис: "
+                                Style="{StaticResource TextBlockBase}"/>
+                    <TextBlock Grid.Column="1"
+                               Text="{Binding SelectedPhone.Description}"
+                                Style="{StaticResource TextBlockBase}"/>
+                </Grid>
+            </StackPanel>
+
+            <Grid Grid.Row="1">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.4*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                    
+                <!--<Image Source="D:\img\default-user.png"
+                        Width="120"/>-->
+                    
+                <StackPanel Grid.Column="1">
+                    <TextBlock  Text="Продавець"
+                                Style="{StaticResource TextBlockHeader}"
+                                HorizontalAlignment="Center"/>
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Логін:"
+                                    Grid.Column="0"
+                                    FontSize="16"
+                                    FontWeight="Bold"
+                                    Foreground="White"/>
+                        <TextBlock Name="Seller"
+                                    Grid.Column="1"
+                                    FontSize="16"
+                                    FontWeight="Bold"
+                                    Foreground="White"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Місцезнаходження:"
+                                    Grid.Column="0"
+                                    FontSize="16"
+                                    FontWeight="Bold"
+                                    Foreground="White"/>
+                        <TextBlock Name="Location"
+                                    Grid.Column="1"
+                                    FontSize="16"
+                                    FontWeight="Bold"
+                                    Foreground="White"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Електронна пошта:"
+                                    Grid.Column="0"
+                                    FontSize="16"
+                                    FontWeight="Bold"
+                                    Foreground="White"/>
+                        <TextBlock Name="Email"
+                                    Grid.Column="1"
+                                    FontSize="16"
+                                    FontWeight="Bold"
+                                    Foreground="White"/>
+                    </Grid>
+
+                    <Grid>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="*"/>
+                            <ColumnDefinition Width="*"/>
+                        </Grid.ColumnDefinitions>
+                        <TextBlock Text="Мобільний телефон:"
+                                    Grid.Column="0"
+                                    FontSize="16"
+                                    FontWeight="Bold"
+                                    Foreground="White"/>
+                        <TextBlock Name="Phone"
+                                    Grid.Column="1"
+                                    FontSize="16"
+                                    FontWeight="Bold"
+                                    Foreground="White"/>
+                    </Grid>
+                </StackPanel>
+            </Grid>
+        </StackPanel>
+    </Grid>
+
+</Window>

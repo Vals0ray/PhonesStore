@@ -13,5 +13,6 @@ namespace SQLiteApp
     /// </summary>
     public partial class App : Application
     {
+
     }
 }

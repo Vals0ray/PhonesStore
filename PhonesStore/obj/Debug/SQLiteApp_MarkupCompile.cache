@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\NULP_SA\Третій Курс\V\Проектування інформаційних систем\Реалізація\PhonesStore\App.xaml
-5-954746951
+121045621489
 
-14-948219371
-191550358002
-AddWindow.xaml;DetailsWindow.xaml;LoginWindow.xaml;MainWindow.xaml;RegistrationWindow.xaml;
+211229587164
+212027820797
+Styles\Button.xaml;Styles\ComboBoxBase.xaml;Styles\Slider.xaml;Styles\TextBlockBase.xaml;Styles\TextBlockForClick.xaml;Styles\TextBlockHeader.xaml;Styles\TextBox.xaml;View\AddWindow.xaml;View\DetailsWindow.xaml;View\LoginWindow.xaml;View\MainWindow.xaml;View\RegistrationWindow.xaml;
 
-False
+True
 
